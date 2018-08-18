@@ -32,4 +32,9 @@ router.post('/subtract', function(req, res) {
 	}
 	return res.send(result);
 })
+
+// returning using res.json
+router.get('/multiply', function(req, res) {
+	return res.json({ result: parseInt(req.query.a) * parseInt(req.query.b)})
+})
 module.exports = router;
