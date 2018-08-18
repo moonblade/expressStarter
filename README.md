@@ -53,3 +53,15 @@ params fetched from request.body (for post)
 URL : GET /multiply
 
 result is sent using res.json function for ease of use for sending jsons
+
+### Error test api
+
+URL : GET /testError
+
+Handling a js error using try catch and returning the correct error message to frontend
+
+### list api
+
+URL : GET /randomList
+
+Returning a list of objects that will be handled by frontend app. (say like search api in a database)
