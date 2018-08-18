@@ -18,6 +18,10 @@ express folderName to gearate the express folder
 
 > Follow the postman link - import this to postman with "import from link" option in postman
 
+> Goto [http://localhost:3000/calc.html](http://localhost:3000/calc.html) To see working after setup in calc folder
+
+        npm i; npm start
+
 
 ## Instructions
 
@@ -32,4 +36,20 @@ express folderName to gearate the express folder
         app.use('/', indexRouter);
 
 
+### Add api
+URL : GET /add
 
+params are fetched from request.query (for get api's)
+
+result is sent using result.send() function
+
+### subtract api
+URL : POST /subtract 
+
+params fetched from request.body (for post)
+
+### multiply api
+
+URL : GET /multiply
+
+result is sent using res.json function for ease of use for sending jsons

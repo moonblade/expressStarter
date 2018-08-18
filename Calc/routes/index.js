@@ -37,4 +37,22 @@ router.post('/subtract', function(req, res) {
 router.get('/multiply', function(req, res) {
 	return res.json({ result: parseInt(req.query.a) * parseInt(req.query.b)})
 })
+
+// Handling a runtime error
+router.get('/testError', function(req, res) {
+	try {
+		var a  = parseInt(req.body.undefinedEntry.undefinedEntry)
+	} catch(e) {
+		// Either use existing error, or use custom error
+		var error = e 
+		// Check if error is empty
+		if (Object.keys(error).length==0)
+			error = {
+				errorCode: 203,
+				errorMessage: "Some error message"
+			}
+		// status can be set on the result, here its set to 500 internal server error 
+		res.status(500).json(error)
+	}
+})
 module.exports = router;
