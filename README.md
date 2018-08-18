@@ -31,7 +31,7 @@ express folderName to gearate the express folder
 
         app.use('/users', usersRouter);
 
-> We'll be using index.js file.
+> We'll be using index.js file. Only this file and public folder need to be checked
 
         app.use('/', indexRouter);
 

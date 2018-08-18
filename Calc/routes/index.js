@@ -55,4 +55,18 @@ router.get('/testError', function(req, res) {
 		res.status(500).json(error)
 	}
 })
+
+// api that returns a list of objects (similar to a search api)
+router.get('/randomList', function(req, res) {
+	var noOfElements=Math.floor(Math.random()*15 + 1)
+	returnList = []
+	for (var i=0; i<noOfElements; ++i) {
+		returnList.push({
+			itemId: i+1,
+			// Random string
+			itemLabel: Math.random().toString(36).substr(2, 5)
+		})
+	}
+	return res.json(returnList)
+})
 module.exports = router;
