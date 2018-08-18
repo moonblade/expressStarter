@@ -27,11 +27,11 @@ express folderName to gearate the express folder
 
 > Api's are added in routes folder, under any of the routes provided.
 
-> The following line in app.js configures one route /users to redirect to users.js file, so any API beginnign with /users with check in users.js file
+> The following line in app.js configures one route /users to redirect to users.js file, so any API beginnign with /users with check in users.js file (removed since not needed)
 
         app.use('/users', usersRouter);
 
-> We'll be using index.js file. Only this file and public folder need to be checked
+> Only routes/index.js file and public/calc.html need to be checked
 
         app.use('/', indexRouter);
 
