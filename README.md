@@ -11,6 +11,7 @@ express folderName to gearate the express folder
 
 > This gives the folder structure as Init folder
 
+> cd into the folder and run npm i to install all modules.
 
 ## Instructions
 
@@ -21,5 +22,6 @@ express folderName to gearate the express folder
 
 > We'll be using index.js file.
         app.use('/', indexRouter);
+
 
 
